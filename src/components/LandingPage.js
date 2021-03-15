@@ -7,9 +7,18 @@ import {
     TitleText1,
     TitleText2,
     TitleText3,
-    TitleLine2
+    TitleLine2,
+    CenterText,
+    CardBox,
+    Img2,
+    Img1,
+    Img3,
+    CardRow,
+    CardImg,
+    CardText,
+    CardBtn
   } from '../styles/Div';
-import { Button } from '../styles/Button'
+import { AboutButton, Button } from '../styles/Button'
 import { 
     Flower, 
     FlowerLeftBottom, 
@@ -23,6 +32,7 @@ import {
     FlowerTop4, 
     FlowerTopRight 
 } from '../styles/Flower';
+import Grid from '@material-ui/core/Grid';
 
 
 function LandingPage() {
@@ -33,7 +43,7 @@ function LandingPage() {
                 <FlowerTop2 color="skyblue" />
                 <FlowerTop3 color="#e6ee9c" />
                 <FlowerTop4 />
-                <FlowerTopRight color="blue" />
+                <FlowerTopRight color="#7c4dff" />
                 <FlowerRight color="#7b1fa2" />
                 <FlowerRight2 color="pink" />
                 <FlowerRightBottom color="red" />
@@ -51,13 +61,64 @@ function LandingPage() {
                     </TitleLine2>
                 </Title>
 
+                <AboutButton primary><strong>About Us</strong></AboutButton>
+
                 <WaveBottom />
             </Background>
+            
             <Wrapper>
-                Middle section
-            </Wrapper>
+                <CenterText>
+                    What Do We Do?
+                </CenterText>
 
-            Landing page
+                <CardRow>
+                    <Grid container>
+                        <Grid item xs={1} />
+                        <Grid item container xs={10} spacing={3}>
+                            <Grid item xs={12} md={4}>
+                                <CardBox>
+                                    <CardImg>
+                                        <Img1 />
+                                    </CardImg>
+                                    <CardText>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum faucibus risus et vulputate. Maecenas congue massa dui, at pulvinar arcu tincidunt ac. Fusce quis ornare lectus, id placerat lorem. 
+                                    </CardText>
+                                    <CardBtn>
+                                        <Button primary>Learn More</Button>
+                                    </CardBtn>
+                                </CardBox>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <CardBox>
+                                    <CardImg>
+                                        <Img2 />
+                                    </CardImg>
+                                    <CardText>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum faucibus risus et vulputate. Maecenas congue massa dui, at pulvinar arcu tincidunt ac. Fusce quis ornare lectus, id placerat lorem. 
+                                    </CardText>
+                                    <CardBtn>
+                                        <Button primary>Learn More</Button>
+                                    </CardBtn>
+                                </CardBox>
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <CardBox>
+                                    <CardImg>
+                                        <Img3 />
+                                    </CardImg>
+                                    <CardText>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum faucibus risus et vulputate. Maecenas congue massa dui, at pulvinar arcu tincidunt ac. Fusce quis ornare lectus, id placerat lorem. 
+                                    </CardText>
+                                    <CardBtn>
+                                        <Button primary>Learn More</Button>
+                                    </CardBtn>
+                                </CardBox>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={1} />
+                    </Grid>
+                </CardRow>
+            </Wrapper>
 
         </div>
     )
