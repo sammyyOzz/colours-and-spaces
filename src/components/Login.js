@@ -1,5 +1,6 @@
 import Grid from '@material-ui/core/Grid'
 import React from 'react'
+import MyModal from './MyModal'
 import { Button, GooglePng } from '../styles/Button'
 import { Background } from '../styles/Div'
 import { 
@@ -37,15 +38,17 @@ function Login() {
                             <Button secondary fullWidth mb3>
                                 <strong>facebook</strong>
                             </Button>
+
                             <Form onSubmit={handleSubmit}>
                                 <Label>Phone Number:</Label>
                                 <Input type="text" placeholder="+234 8154681215" />
                                 <Label>Password:</Label>
                                 <Input type = "password" placeholder="password" />
-                                <Button warning fullWidth type="submit" mb2>
-                                    <strong>Login</strong>
-                                </Button>
+                                {/* <Button warning fullWidth type="submit" mb2> */}
+                                    <MyModal />
+                                {/* </Button> */}
                             </Form>
+
                             <FormSeperator>
                                 <SignUpLink>
                                     <strong>Sign Up!</strong>

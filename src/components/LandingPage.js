@@ -36,6 +36,8 @@ import Grid from '@material-ui/core/Grid';
 
 
 function LandingPage() {
+    const size = window.innerWidth
+
     return (
         <div className="landing">
             <Background>

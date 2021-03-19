@@ -36,3 +36,9 @@ export const GooglePng = styled.img.attrs({
     margin-left: auto;
     margin-right: auto;
 `
+export const BlockButton = styled(Button)`
+    padding: 0px 40px;
+    border-radius: 12px;
+    background-color: #212121;
+    color: white;
+`

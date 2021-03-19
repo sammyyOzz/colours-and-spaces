@@ -1,15 +1,24 @@
 import styled, {css} from 'styled-components'
+import cardImg from './images/card.png'
+import appleImg from './images/apple.png'
+import paypalImg from './images/paypal.png'
 
 export const Form = styled.form`
     width: 100%;
 `
+export const InnerModalForm = styled.form`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 export const Input = styled.input`
     width: 100%;
-    border: 1px solid red;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid white;
-    color: white;
+    border-bottom: 2px solid ${props => props.dark ? "gray" : "white"};
+    color: ${props => props.dark ? "black" : "white"};
     margin-top: 12px;
     margin-bottom: 20px;
 `
@@ -27,7 +36,7 @@ export const CenterTextForm = styled.div`
     margin-bottom: 20px;
 `
 export const Label = styled.span`
-    color: white;
+    color: ${props => props.dark ? "gray" : "white"};
     font-size: small;
 `
 export const FormSeperator = styled.div`
@@ -39,4 +48,66 @@ export const SignUpLink = styled.span`
 `
 export const ForgotPasswordLink = styled.span`
     color: white;
+`
+export const RadioCapsule = styled.div`
+    box-shadow: 1px 1px 3px 1px #aaaaaa;
+    border-radius: 12px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 100ms linear;
+    &:hover {
+        transition: all 100ms linear;
+        box-shadow: 2px 2px 4px 2px #757575;
+    }
+`
+export const RadioLeft = styled.div`
+    display: flex;
+    align-items: center;
+`
+export const RadioRight = styled.div`
+    border: 1px solid rgba(81, 85, 81, 0.4);
+    border-radius: 5px;
+    height: 12px;
+    width: 12px;
+    margin-right: 20px;
+    background-color: ${props => props.selected && "orange"};
+    transition: all 50ms linear;
+    &:hover {
+        transition: all 100ms linear;
+        box-shadow: 1px 1px 3px 1px #757575;
+    }
+`
+export const CardPng = styled.img.attrs({
+    src: cardImg
+})`
+    width: 40px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    margin-left: 15px;
+    margin-right: 10px;
+`
+export const ApplePng = styled.img.attrs({
+    src: appleImg
+})`
+    width: 40px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+    margin-left: 15px;
+    margin-right: 10px;
+`
+export const PaypalPng = styled.img.attrs({
+    src: paypalImg
+})`
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin-left: 15px;
+    margin-right: 10px;
 `
