@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { 
     Background, 
     Wrapper, 
@@ -40,6 +41,24 @@ import { Wave } from 'react-animated-text'
 
 function LandingPage() {
 
+    const [willAnimate, setWillAnimate] = useState(true)
+
+    useEffect(() => {
+        const checkAnimation = () => {
+            const animate = sessionStorage.getItem('waveMotion')
+            if(animate) {
+                setWillAnimate(false)
+            } else {
+                sessionStorage.setItem('waveMotion', 1)
+            }
+
+            if(willAnimate) {
+                setTimeout(() => setWillAnimate(false), 3000)
+            }
+        }
+        checkAnimation()
+    }, [])
+
     return (
         <div className="landing">
             <Background>
@@ -59,12 +78,15 @@ function LandingPage() {
                     <TitleWrapper>
                         <Title>
                             <TitleText1>
-                                {/* <Wave 
-                                    text="COLOURS"
-                                    effect="stretch"
-                                    effectChange={2.0}
-                                /> */}
-                                COLOURS
+                                {
+                                    willAnimate ? 
+                                        <Wave 
+                                            text="COLOURS"
+                                            effect="stretch"
+                                            effectChange={2.0}
+                                        /> 
+                                    : "COLOURS"
+                                }
                             </TitleText1>
                             <TitleLine2>
                                 <TitleText2>

@@ -59,11 +59,15 @@ export const RadioCapsule = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    -webkit-transition: all 100ms linear;
     transition: all 100ms linear;
     cursor: pointer;
     &:hover {
+        -webkit-transition: all 100ms linear;
         transition: all 100ms linear;
+        -webkit-box-shadow: 2px 2px 4px 2px #757575;
         box-shadow: 2px 2px 4px 2px #757575;
+        -webkit-transform: scale(1.01);
         transform: scale(1.01);
     }
 `
