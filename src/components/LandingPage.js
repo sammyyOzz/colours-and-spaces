@@ -19,8 +19,6 @@ import {
     CardBtn,
     FullScreen,
     TitleWrapper,
-    WrapperTest,
-    ItemTest,
 } from '../styles/Div';
 import { AboutButton, Button } from '../styles/Button'
 import { 
@@ -81,25 +79,12 @@ function LandingPage() {
                     </TitleWrapper>
                 </FullScreen>
 
-                {/* <AboutButton primary><strong>About Us</strong></AboutButton> */}
+                <AboutButton primary><strong>About Us</strong></AboutButton>
 
                 <WaveBottom />
             </Background>
             
             <Wrapper>
-                <WrapperTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                    <ItemTest>test</ItemTest>
-                </WrapperTest>
-                
                 <CenterText>
                     What Do We Do?
                 </CenterText>

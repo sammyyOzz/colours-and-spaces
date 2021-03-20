@@ -30,6 +30,17 @@ export const HeaderTitleText2 = styled.div`
 export const HeaderRight = styled.div`
     margin-right: 50px;
     margin-top: 20px;
+
+    @media (max-width: 960px) {
+        display: none;
+    }
+`
+export const HeaderRightMobile = styled.div`
+    display: none;
+    padding: 3px 20px;
+    @media (max-width: 960px) {
+        display: inline;
+    }
 `
 export const HeaderButton = {
     color: 'white',

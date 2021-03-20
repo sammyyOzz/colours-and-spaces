@@ -1,8 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { HeaderActive, HeaderButton, HeaderRight, HeaderStyle, HeaderTitle, HeaderTitleText1, HeaderTitleText2 } from '../styles/HeaderStyle'
+import { HeaderActive, HeaderButton, HeaderRight, HeaderRightMobile, HeaderStyle, HeaderTitle, HeaderTitleText1, HeaderTitleText2 } from '../styles/HeaderStyle'
+import NavMobile from './NavMobile'
 
 function Header() {
+    const width = window.innerWidth
+    
     return (
         <HeaderStyle>
             <HeaderTitle>
@@ -30,6 +33,9 @@ function Header() {
                     <strong>CONTACT</strong>
                 </NavLink>
             </HeaderRight>
+            <HeaderRightMobile>
+                <NavMobile />
+            </HeaderRightMobile>
         </HeaderStyle>
     )
 }

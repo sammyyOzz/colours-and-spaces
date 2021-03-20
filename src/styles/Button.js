@@ -28,10 +28,6 @@ export const AboutButton = styled(Button)`
     left: 13%;
     padding: 6px 40px 6px 40px;
     z-index: 21;
-
-    @media (max-width: 960px) {
-        bottom: 18%;
-    }
 `
 export const GooglePng = styled.img.attrs({
     src: googleImg

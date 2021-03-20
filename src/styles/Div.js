@@ -152,25 +152,4 @@ export const Img3 = styled.img.attrs({
     margin-left: auto;
     margin-right: auto;
 `
-export const WrapperTest = styled.div`
-    max-height: 120px;
-    border: 1px solid #ddd;
-    display: flex;
-    overflow-x: auto;
 
-    min-width: 110px;
-    height: 110px;
-    line-height: 110px;
-    text-align: center;
-    background-color: white;
-    margin-right: 2px;
-`
-
-export const ItemTest = styled.div`
-    min-width: 110px;
-    height: 110px;
-    line-height: 110px;
-    text-align: center;
-    background-color: #ddd;
-    margin-right: 2px;
-`
