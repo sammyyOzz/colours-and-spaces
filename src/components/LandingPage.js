@@ -16,8 +16,12 @@ import {
     CardRow,
     CardImg,
     CardText,
-    CardBtn
-  } from '../styles/Div';
+    CardBtn,
+    FullScreen,
+    TitleWrapper,
+    WrapperTest,
+    ItemTest,
+} from '../styles/Div';
 import { AboutButton, Button } from '../styles/Button'
 import { 
     Flower, 
@@ -33,10 +37,10 @@ import {
     FlowerTopRight 
 } from '../styles/Flower';
 import Grid from '@material-ui/core/Grid';
+import { Wave } from 'react-animated-text'
 
 
 function LandingPage() {
-    const size = window.innerWidth
 
     return (
         <div className="landing">
@@ -53,22 +57,49 @@ function LandingPage() {
                 <FlowerLeftBottom color="skyblue" />
                 <FlowerLeft color="green" />
 
-                <LightBulb />
+                <FullScreen>
+                    <TitleWrapper>
+                        <Title>
+                            <TitleText1>
+                                {/* <Wave 
+                                    text="COLOURS"
+                                    effect="stretch"
+                                    effectChange={2.0}
+                                /> */}
+                                COLOURS
+                            </TitleText1>
+                            <TitleLine2>
+                                <TitleText2>
+                                    <strong>AND</strong>
+                                </TitleText2>
+                                <TitleText3>
+                                    <strong>SPACES</strong>
+                                </TitleText3>
+                            </TitleLine2>
+                        </Title>
+                        <LightBulb />
+                    </TitleWrapper>
+                </FullScreen>
 
-                <Title>
-                    <TitleText1>COLOURS</TitleText1>
-                    <TitleLine2>
-                        <TitleText2><strong>AND</strong></TitleText2>
-                        <TitleText3><strong>SPACES</strong></TitleText3>
-                    </TitleLine2>
-                </Title>
-
-                <AboutButton primary><strong>About Us</strong></AboutButton>
+                {/* <AboutButton primary><strong>About Us</strong></AboutButton> */}
 
                 <WaveBottom />
             </Background>
             
             <Wrapper>
+                <WrapperTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                    <ItemTest>test</ItemTest>
+                </WrapperTest>
+                
                 <CenterText>
                     What Do We Do?
                 </CenterText>

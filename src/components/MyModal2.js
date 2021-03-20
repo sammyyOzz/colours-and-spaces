@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => (modalStyles));
 export default function Modal2() {
   const classes = useStyles();
   const [ { innerModal }, dispatch] = useStateValue()
-  const [radioVal, setRadioVal] = useState(null)
+  const [paymentOption, setPaymentOption] = useState(null)
 
   const handleClose = () => {
     dispatch({
@@ -74,25 +74,25 @@ export default function Modal2() {
                   </div>
                   
                   <div>
-                    <RadioCapsule onClick={() => setRadioVal("card")}>
+                    <RadioCapsule onClick={() => setPaymentOption("card")}>
                       <RadioLeft>
                         <CardPng />
                         <small>Card</small>
                       </RadioLeft>
-                      <RadioRight selected={radioVal === 'card' && true} />
+                      <RadioRight selected={paymentOption === 'card' && true} />
                     </RadioCapsule>
-                    <RadioCapsule onClick={() => setRadioVal("apple")}>
+                    <RadioCapsule onClick={() => setPaymentOption("apple")}>
                       <RadioLeft>
                         <ApplePng />
                         <small>Apple Pay</small>
                       </RadioLeft>
-                      <RadioRight selected={radioVal === 'apple' && true} />
+                      <RadioRight selected={paymentOption === 'apple' && true} />
                     </RadioCapsule>
-                    <RadioCapsule onClick={() => setRadioVal("paypal")}>
+                    <RadioCapsule onClick={() => setPaymentOption("paypal")}>
                       <RadioLeft>
                         <PaypalPng />
                       </RadioLeft>
-                      <RadioRight selected={radioVal === 'paypal' && true} />
+                      <RadioRight selected={paymentOption === 'paypal' && true} />
                     </RadioCapsule> 
                   </div>
                   <div className={classes.btn}>

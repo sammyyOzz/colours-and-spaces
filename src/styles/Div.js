@@ -19,12 +19,24 @@ export const CenterText = styled.section`
     width: 100%;
 `
 export const Background = styled.div`
-    height: ${props => props.screen ? "100vh" : "120vh"};
+    height: ${props => props.screenHeight ? "100vh" : "120vh"};
     width: 100%;
     background-image: url(${purpleBackground});
     position: relative;
     overflow: hidden;
-    // margin-bottom: 50px;
+`
+export const FullScreen = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+`
+export const TitleWrapper = styled.div`
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 export const WaveBottom = styled.div`
     bottom: 0;
@@ -33,27 +45,33 @@ export const WaveBottom = styled.div`
     width: 100%;
     height: 80px;
     position: absolute;
+    z-index: 20;
 `
 export const LightBulb = styled.div`
     background-image: url(${bulbImg});
     background-size: cover;
     height: 496px;
     width: 543px;
-    position: absolute;
-    top: 8%;
-    right: 0;
+    margin-left: 100px;
     z-index: 1;
     transform: scale(0.7);
+
+    @media (max-width: 1280px) {
+        display: none;
+    }
+    
 `
 export const Title = styled.div`
+    padding-bottom: 100px;
     color: white;
-    position: absolute;
-    z-index: 1;
-    top: 25%;
-    left: 13%;
-    height: 150px;
-    width: 38%;
+    z-index: 2;
+    height: 200px;
+    width: 500px;
     font-family: 'Brygada 1918', serif;
+
+    @media (max-width: 600px) {
+        transform: scale(0.7);
+    }
 `
 export const TitleText1 = styled.h1`
     font-size: 80px;
@@ -134,4 +152,25 @@ export const Img3 = styled.img.attrs({
     margin-left: auto;
     margin-right: auto;
 `
+export const WrapperTest = styled.div`
+    max-height: 120px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
 
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: white;
+    margin-right: 2px;
+`
+
+export const ItemTest = styled.div`
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+`

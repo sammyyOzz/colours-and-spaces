@@ -5,6 +5,7 @@ import paypalImg from './images/paypal.png'
 
 export const Form = styled.form`
     width: 100%;
+    z-index: 10;
 `
 export const InnerModalForm = styled.form`
     width: 100%;
@@ -59,9 +60,11 @@ export const RadioCapsule = styled.div`
     align-items: center;
     margin-bottom: 20px;
     transition: all 100ms linear;
+    cursor: pointer;
     &:hover {
         transition: all 100ms linear;
         box-shadow: 2px 2px 4px 2px #757575;
+        transform: scale(1.01);
     }
 `
 export const RadioLeft = styled.div`

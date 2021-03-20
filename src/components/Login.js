@@ -13,6 +13,19 @@ import {
     ForgotPasswordLink,
     FormSeperator
 } from '../styles/Form'
+import { 
+    Flower, 
+    FlowerLeftBottom, 
+    FlowerLeft,
+    FlowerRight, 
+    FlowerRight2, 
+    FlowerRightBottom, 
+    FlowerRightBottom2, 
+    FlowerTop2, 
+    FlowerTop3, 
+    FlowerTop4, 
+    FlowerTopRight 
+} from '../styles/Flower';
 
 function Login() {
 
@@ -22,7 +35,19 @@ function Login() {
     }
 
     return (
-        <Background screen>
+        <Background screenHeight>
+            <Flower half />
+            <FlowerTop2 color="skyblue" half />
+            <FlowerTop3 color="#e6ee9c" half />
+            <FlowerTop4 half />
+            <FlowerTopRight color="#7c4dff" half />
+            <FlowerRight color="#7b1fa2" half />
+            <FlowerRight2 color="pink" half />
+            <FlowerRightBottom color="red" half />
+            <FlowerRightBottom2 color="cyan" half />
+            <FlowerLeftBottom color="skyblue" half />
+            <FlowerLeft color="green" half />
+
             <FormWrapper>
                 <Grid container>
                     <Grid item xs={1} md={3} lg={4} />
