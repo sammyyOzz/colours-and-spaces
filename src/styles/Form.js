@@ -22,6 +22,11 @@ export const Input = styled.input`
     color: ${props => props.dark ? "black" : "white"};
     margin-top: 12px;
     margin-bottom: 20px;
+
+    @media(max-width: 960px) {
+        color: ${props => props.dark && "white"};
+    }
+    
 `
 export const FormWrapper = styled.div`
     width: 100%;
@@ -39,6 +44,9 @@ export const CenterTextForm = styled.div`
 export const Label = styled.span`
     color: ${props => props.dark ? "gray" : "white"};
     font-size: small;
+    @media(max-width: 960px) {
+        color: ${props => props.dark && "white"};
+    }
 `
 export const FormSeperator = styled.div`
     display: flex;
@@ -69,6 +77,14 @@ export const RadioCapsule = styled.div`
         box-shadow: 2px 2px 4px 2px #757575;
         -webkit-transform: scale(1.01);
         transform: scale(1.01);
+    }
+
+    @media (max-width: 960px) {
+        background-color: white;
+        box-shadow: 1px 1px 3px 1px #424242;  
+        &:hover {
+            box-shadow: 2px 2px 4px 2px #212121;
+        }
     }
 `
 export const RadioLeft = styled.div`

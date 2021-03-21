@@ -53,17 +53,14 @@ export default function TransitionsModal() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <div className={classes.modalLeft}>
-              <h2 id="transition-modal-title">Transition modal</h2>
-              <p id="transition-modal-description">react-transition-group animates me.</p>
-            </div>
+            <div className={classes.modalLeft} />
             <div className={classes.modalRight}>
               <div className={classes.modalRightContent}>
                 <div className={classes.modalText}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum faucibus risus et vulputate. Maecenas congue massa dui, at pulvinar arcu tincidunt ac. Fusce quis ornare lectus, id placerat lorem. 
                 </div>
                 <div>
-                  <Label dark>enter OTP</Label>
+                  <Label dark>enter OTP :</Label>
                   <div className={classes.otpContainer}>
                     <div className={classes.otpInput}>
                       <Input type="text" dark value={inputVal} onChange={e => setInputVal(e.target.value)} />

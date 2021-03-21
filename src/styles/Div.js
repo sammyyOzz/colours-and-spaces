@@ -153,3 +153,10 @@ export const Img3 = styled.img.attrs({
     margin-right: auto;
 `
 
+export const PageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background-color: #e3f2fd; */
+  font-family: "Open Sans", sans-serif;
+`

@@ -45,8 +45,7 @@ export default function Modal2() {
         <Fade in={innerModal}>
         <div className={classes.paperInnerModal}>
             <div className={classes.modalLeft}>
-              <h2 id="transition-modal-title">Transition modal</h2>
-              <p id="transition-modal-description">react-transition-group animates me.</p>
+              
             </div>
             <div className={classes.modalRight}>
               <InnerModalForm onSubmit={handleSubmit}>

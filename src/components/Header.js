@@ -4,7 +4,6 @@ import { HeaderActive, HeaderButton, HeaderRight, HeaderRightMobile, HeaderStyle
 import NavMobile from './NavMobile'
 
 function Header() {
-    const width = window.innerWidth
     
     return (
         <HeaderStyle>

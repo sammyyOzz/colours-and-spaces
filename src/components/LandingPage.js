@@ -37,6 +37,7 @@ import {
 } from '../styles/Flower';
 import Grid from '@material-ui/core/Grid';
 import { Wave } from 'react-animated-text'
+import { HomePageElm } from '../styles/KeyFrames';
 
 
 function LandingPage() {
@@ -60,7 +61,7 @@ function LandingPage() {
     }, [])
 
     return (
-        <div className="landing">
+        <HomePageElm>
             <Background>
                 <Flower />
                 <FlowerTop2 color="skyblue" />
@@ -159,8 +160,7 @@ function LandingPage() {
                     </Grid>
                 </CardRow>
             </Wrapper>
-
-        </div>
+        </HomePageElm>
     )
 }
 
