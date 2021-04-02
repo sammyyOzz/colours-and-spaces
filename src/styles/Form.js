@@ -22,6 +22,10 @@ export const Input = styled.input`
     color: ${props => props.dark ? "black" : "white"};
     margin-top: 12px;
     margin-bottom: 20px;
+    &:focus {
+        border: none;
+        border-bottom: 2px solid ${props => props.dark ? "gray" : "white"};
+    }
 
     @media(max-width: 960px) {
         color: ${props => props.dark && "white"};
@@ -34,6 +38,7 @@ export const FormWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 `
 export const CenterTextForm = styled.div`
     text-align: center;

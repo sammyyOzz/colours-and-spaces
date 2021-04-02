@@ -7,12 +7,13 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
+import HomeIcon from '@material-ui/icons/Home';
+import InfoIcon from '@material-ui/icons/Info';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import ContactsIcon from '@material-ui/icons/Contacts';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import LocalMallIcon from '@material-ui/icons/LocalMall';
 import { Link } from 'react-router-dom';
 import { actionTypes } from '../reducer';
 import { useStateValue } from '../StateProvider';
@@ -68,30 +69,31 @@ export default function NavMobile({ user }) {
       </List>
       <Divider />
       <List>
-        <ListItem button onClick={closeModal}>
-          <ListItemIcon><LocalMallIcon /></ListItemIcon>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-            <ListItemText>HOME</ListItemText>
-          </Link>  
-        </ListItem>
-        <ListItem button  onClick={closeModal}>
-          <ListItemIcon><LocalMallIcon /></ListItemIcon>
+            <ListItem button onClick={closeModal}>
+            <ListItemIcon><HomeIcon /></ListItemIcon>
+              <ListItemText>HOME</ListItemText>
+            </ListItem>
+          </Link> 
           <Link to="/about-us" style={{ textDecoration: 'none', color: 'black' }}>
-            <ListItemText>ABOUT US</ListItemText>
-          </Link>  
-        </ListItem>
-        <ListItem button onClick={closeModal}>
-          <ListItemIcon><LocalMallIcon /></ListItemIcon>
+            <ListItem button onClick={closeModal}>
+            <ListItemIcon><InfoIcon /></ListItemIcon>
+              <ListItemText>ABOUT US</ListItemText>
+            </ListItem>
+          </Link> 
           <Link to="/login" style={{ textDecoration: 'none', color: 'black' }}>
-            <ListItemText>LOGIN</ListItemText>
-          </Link>  
-        </ListItem>
-        <ListItem button onClick={closeModal}>
-          <ListItemIcon><LocalMallIcon /></ListItemIcon>
+            <ListItem button onClick={closeModal}>
+            <ListItemIcon><ExitToAppIcon /></ListItemIcon>
+              <ListItemText>LOGIN</ListItemText>
+            </ListItem>
+          </Link> 
           <Link to="/contact" style={{ textDecoration: 'none', color: 'black' }}>
-            <ListItemText>CONTACT</ListItemText>
-          </Link>  
-        </ListItem>
+            <ListItem button onClick={closeModal}>
+            <ListItemIcon><ContactsIcon /></ListItemIcon>
+              <ListItemText>CONTACT</ListItemText>
+            </ListItem>
+          </Link> 
+       
       </List>
     </div>
   );

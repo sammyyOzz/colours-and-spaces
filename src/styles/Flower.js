@@ -116,7 +116,8 @@ export const FlowerLeftBottom = styled(Flower)`
     height: 300px;
 
     @media (max-width: 1080px) { 
-        top: ${props => props.half ? "90%" : "78%"};
+        top: ${props => props.half ? "90%" : "85%"};
+        left: -30px;
         height: 210px;
     }
 `
